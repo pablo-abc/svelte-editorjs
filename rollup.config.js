@@ -15,8 +15,8 @@ export default {
   input: './src/index.ts',
   external: ['svelte'],
   output: [
-    { file: pkg.browser, format: 'umd', sourcemap: prod, name },
-    { file: pkg.module, format: 'esm', sourcemap: prod },
+    { dir: 'dist/cjs', format: 'cjs', sourcemap: prod, name },
+    { dir: 'dist/esm', format: 'es', sourcemap: prod },
   ],
   plugins: [
     replace({

@@ -2,20 +2,15 @@
   "name": "svelte-editorjs",
   "version": "0.1.0",
   "description": "An EditorJS wrapper for Svelte",
-  "main": "dist/index.js",
-  "browser": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "author": "Pablo Berganza <pablo@berganza.dev>",
   "license": "MIT",
   "homepage": "https://github.com/pablo-abc/svelte-editorjs",
   "repository": "github:pablo-abc/svelte-editorjs",
   "funding": "https://www.buymeacoffee.com/pablo.abc",
-  "keywords": [
-    "svelte",
-    "WYSWYG",
-    "editor"
-  ],
+  "keywords": ["svelte", "WYSWYG", "editor", "editorjs"],
   "scripts": {
     "prebuild": "rimraf ./dist",
     "build": "cross-env NODE_ENV=production rollup -c",
@@ -28,9 +23,7 @@
     "@editorjs/editorjs": "^2.19.3",
     "svelte": "3.31.0"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {},
   "publishConfig": {
     "access": "public"
@@ -48,5 +41,12 @@
     "rollup-plugin-terser": "^7.0.2",
     "svelte": "3.31.0",
     "typescript": "^4.2.3"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
   }
 }
