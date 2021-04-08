@@ -15,7 +15,7 @@
     "prebuild": "rimraf ./dist",
     "build": "cross-env NODE_ENV=production rollup -c",
     "dev": "rollup -cw",
-    "prepublishOnly": "yarn test:ci && yarn build",
+    "prepublishOnly": "yarn build",
     "test": "jest",
     "test:ci": "jest --ci --coverage"
   },
