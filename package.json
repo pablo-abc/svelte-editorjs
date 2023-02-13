@@ -20,8 +20,8 @@
     "test:ci": "jest --ci --coverage"
   },
   "peerDependencies": {
-    "@editorjs/editorjs": "^2.19.3",
-    "svelte": "3.31.0"
+    "@editorjs/editorjs": "^2.26.5",
+    "svelte": "^3.55.1"
   },
   "files": ["dist"],
   "dependencies": {},
